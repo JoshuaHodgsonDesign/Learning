@@ -26,7 +26,7 @@
                 var PEMDAS = (a + b) / a * b;
                     console.log(PEMDAS)                
             
-              // Simple Temp converter. 
+            // Simple Temp converter. 
                 var C = 25;
                 var F = C * 9 / 5 + 32; 
                     console.log(F)                
@@ -34,7 +34,230 @@
             </script>
         </div>
     
+        
+        <div> 
+            <script>
+            // Objects a colection of properties uses curly brackets  
+            // var X = {};
+                var player = {
+                    name: 'Josh',
+                    energy: 100,
+                    lives: 2,
+                    x: 19,
+                    y: 100,
+                    color: 'blue'
+                };
+            // differnt ways of acessing properties 
+                    console.log(player);
+
+                    console.log(player.name); //dot notation
+
+                    console.log(player['color']); //bracket notation
+                
+                player.name='this is the changed name' // this is how you can spot change a property 
+                
+            // to add to an object this also creates an object friend inside the player object
+                
+                player.friend = {name: 'friends name'} //
+            </script>
+        </div>
+        
+        
+        <div> 
+            <script>
+            //how to concatenate strings 
+                var title = "Mr."
+                var name = "Pablo"
+                
+                var Greeting = "Hello " + title + " " + name // dont forget to add the space! 
+                    
+                    console.log(Greeting); // say Hello
+                
+                var makeUpper = Greeting.toUpperCase(); // takes the greeting var and makes it UPPERCASE
+
+                    console.log(makeUpper); // say HELLO
+                
+                var makeLower = Greeting.toLowerCase(); // takes the greeting var and makes it lowercase
+
+                    console.log(makeLower); // say hello
+
+            //how to get only a part of a string
+                var firstinitial = name.slice(0, 1);
+                    
+                console.log(firstinitial); // prints the first letter of his name.                
+            </script>
+        </div>
+        
+        <div> 
+            <script>
+            //arrays are an sorted colection [0, 1, 2] they have positions called the index
+                var enemies = [
+                    {x:10, y:10, color:'blue'}, // objects within the enemies array. 
+                    // the bomb gets added here
+                    {x:15, y:15, color:'red'},
+                    {x:20, y:30, color:'green'},
+                    //the knife .push below gets added here
+                
+                ];          
+            
+                        
+                enemies[0].color= "white" // changes the  color from blue to white
+                
+                enemies[2].Weight= 100 // add the Weight var to the thrid object in the array
+
+                enemies.push('knife', 'laserknife'); // add these to strings to the array in the [3 ,4] positions       
+                
+                    console.log(enemies); // prints the added objects 
+
+                
+                enemies.pop(); // removes the last element from the array 
+                
+                enemies.splice (1, 0, 'bomb' ); 
+                
+                    // the first number is the position to add or remove
+                    // the second number is how many to add or remove
+                    // any additional is what can be added to the array 
+
+                    
+                    console.log(enemies); // prints the array 
+                    console.log(enemies.length); // prints how many objects are in the array 
+                    console.log(enemies[0]); // prints the first object 
+                    console.log(enemies[2]); // prints the third object  
+
+            
+                //muti-dimensional arrays, arrays have positions so to change number 2 to "tooDeep"
+                // the second array is in the [2] then from there the thrid array is also in the [2]
+                // then in the third array I set [0] to "tooDeep"
+                
+                    var a = [23, 33, // [0 , 1]
+                                ['alpha', 12, // [2]
+                                    [2,3,5]
+                                ]
+                            ]
+            
+                    a[2][2][0] = "tooDeep";
+                    console.log(a);
+            
+            
+            
+            </script>
+        </div>
+              
+    
+        
+        
+        
       
     
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
