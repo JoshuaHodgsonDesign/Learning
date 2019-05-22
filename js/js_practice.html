@@ -31,12 +31,7 @@
                 var F = C * 9 / 5 + 32; 
                     console.log(F)                
             
-            </script>
-        </div>
-    
-        
-        <div> 
-            <script>
+     
             // Objects a colection of properties uses curly brackets  
             // var X = {};
                 var player = {
@@ -59,12 +54,9 @@
             // to add to an object this also creates an object friend inside the player object
                 
                 player.friend = {name: 'friends name'} //
-            </script>
-        </div>
-        
-        
-        <div> 
-            <script>
+          
+                
+                
             //how to concatenate strings 
                 var title = "Mr."
                 var name = "Pablo"
@@ -85,11 +77,11 @@
                 var firstinitial = name.slice(0, 1);
                     
                 console.log(firstinitial); // prints the first letter of his name.                
-            </script>
-        </div>
-        
-        <div> 
-            <script>
+    
+                
+//----------------------------------------------------------------------------
+   
+                
             //arrays are an sorted colection [0, 1, 2] they have positions called the index
                 var enemies = [
                     {x:10, y:10, color:'blue'}, // objects within the enemies array. 
@@ -137,6 +129,138 @@
             
                     a[2][2][0] = "tooDeep";
                     console.log(a);
+            
+            
+//----------------------------------------------------------------------------
+                
+                var enemiesboss = [
+                    {x:10, y:10, energy: 100},
+                    {x:15, y:15, energy: 50},
+                    {x:20, y:30, energy: 70},
+                  
+                ];          
+           
+                    enemiesboss[2].energy = 12; // how to modify a object within the enemiesboss array
+                    enemiesboss[0].energy = 66; 
+
+                
+            
+                var player2 = {
+                    name: 'ben',
+                    energy: 100,
+                    lives: 2,
+                    x: 19,
+                    y: 100,
+                    color: 'blue',
+                    weapons:['gun', 'knife', 'bomb']
+                };
+                
+                    player2.weapons.push('axe') // add a weapon to the weapons array within the player object
+            
+            
+//***FUNCTIONS***----------------------------------------------------------------------------
+                
+                // allows you to make a calc. or determation once and then apply it over and over 
+                
+              
+                var m = 13  // this is in the global scope and can be seen by the function
+                // how many meters to convert?
+                
+                
+                
+                function converter() {  // meter to cm converter 
+                      
+                    var factor = 100 // this value is local and can not be called out side of the function
+                    
+                    var converted = m * factor // this find the 'm' value in the global scope and uses the local scope var 'factor' to return 
+                    
+                    
+                   return converted; // functions may or may not return a value  
+                    
+                
+                }
+                      
+                    console.log(converter(m)) // call the fuction with converter(var goes here)
+                    //  console.log(factor) i cant .log this because its in the local scope. 
+                  
+                
+//***NESTED FUNCTIONS***----------------------------------------------------------------------------
+
+            
+           
+                function logit(txt) { // this is a function that adds decoration to my logs it uses console.log
+                    
+                    function decorate(a){ // adds ~~~ to whatever is in decorate(txt)
+                        return "~~~~~" + a + "~~~~~" 
+                        
+                    };
+                    
+                    txt = decorate(txt); // sets whatever I put in the logit function to be used bt the decorate                            fuction
+                    console.log(txt)  
+                };
+            
+                logit('decorate this text') //I can now call the logit function when ever i want to console.log                              for add flair 
+                logit(converter(m))
+                logit(enemies)
+            
+                
+                
+ //***METHODS***----------------------------------------------------------------------------
+                    
+                
+            
+            
+                var player3 = {
+                    name: 'ben',
+                    energy: 100,
+                    lives: 2,
+                    x: 19,
+                    y: 100,
+                    color: 'blue',
+                    weapons:['gun', 'knife', 'bomb'],
+                    superpower: function () {
+                        logit('no superpower')
+                        
+                    },
+                    
+                    // because functions are just another type of var I can 
+                    // add a method called addweapon to let me add weapons to this player
+                          
+                            
+                    addWeapon: function(newWeapon) {  //the addweapon object with a function as the var
+                        this.weapons.push(newWeapon); //the this key word refers the object then we add to the weapons using the function
+                    }
+                };
+            
+        
+                player3.addWeapon('axe') // this call the function and adds axe 
+                                         // into the newweapon var where it is pushed into the array
+                player3.addWeapon('minigun')
+
+                logit(player3.weapons)
+            
+                
+                
+                
+            
+    //***FUNCTIONS EXPRESSION***----------------------------------------------------------------------------
+                
+                var fly = function(){ // function expressions lets me modify a method 
+                    console.log ('you are flying')
+                    
+                };
+            
+            
+                player3.superpower = fly; // recipe for the cake - using 
+                player3.superpower();     // making the cake - calling
+            
+            
+  
+            
+            
+            
+            
+            
             
             
             
